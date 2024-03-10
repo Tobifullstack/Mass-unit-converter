@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+</head>
+  <style>
+  *{
+   margin: 0;
+   padding: 0;
+
+
+
+  }
+  h3{
+
+    text-align: center;
+    color: blue;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1em 0;
+
+  }
+
+  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    padding: 1.5em 0;
+  }
+
+  input{
+    padding: 1em .5em;
+    width: 15em;
+    border-radius: .5rem;
+    border: none;
+
+  }
+
+  button{
+
+    padding: .8em;
+    border: none;
+    border-radius: .5em;
+    margin: .5em;
+    background: orange;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    
+  }
+
+ h1{
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 1em;
+ } 
+
+
+  </style>
+<body>
+   <h3>Unit Converter (Kg to g and tonnes)</h3>  
+   <form >
+    <input type="number" class="question" placeholder="Kg">
+    <button class="gram">To gram</button>
+    <button class="tonnes">To tonnes</button>
+   </form>
+
+   <h1></h1>
+
+    <script>
+    var btna = document.querySelector(".gram")
+    var btnb = document.querySelector(".tonnes")
+    var answer= document.querySelector("h1")
+    var quest = document.querySelector(".question")
+
+     btna.onclick = (e)=>{
+        e.preventDefault()
+      var typedvalue = quest.value
+      var solve = typedvalue * 1000
+
+      answer.innerHTML = solve + " gram"
+     }
+
+     btnb.onclick = (e)=>{
+     e.preventDefault()
+     var valueTyped = quest.value
+     var formula = valueTyped / 1000
+
+     answer.innerHTML = formula + " tonnes"
+     }
+
+    </script>
+
+</body>
+</html>
